@@ -1,0 +1,13 @@
+<!--treehole.wxml-->
+<view class="test-bg" >
+  <button class='userinfo-avatar' bindtap='bindBtnTap' open-type='getUserInfo' 
+  wx:if="{{!hasUserInfo && canIUse}}"></button>
+  <block wx:else>
+    <view class='userinfo'>
+      <image src="{{userInfo.avatarUrl}}" class='userinfo-avatar' bindtap='bindBtnTap'></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </block>
+  <view class="touch-region" ontouchstart='bindTouchBegain' ontouchend='bindTouchEnd'></view>
+  <text class='showText'>{{recordText}}</text>
+</view>

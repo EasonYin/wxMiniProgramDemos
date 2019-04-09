@@ -1,0 +1,18 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.log-item {
+  display: inline-flex;
+  flex-direction: column;
+}
+.log-text{
+  color: #231dfa;
+}
+.log-slider{
+  block-size: 12;
+}
+.log-play{
+
+}
