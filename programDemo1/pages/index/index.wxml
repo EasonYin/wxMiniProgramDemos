@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="section" >
+  <view class='section-title'>个人信息</view>
+  <view class='userinfo'>
+      <image src="{{userInfo.avatarUrl}}" class='userinfo-avatar' bindtap='bindBtnTap'></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class='section-title'>应用列表</view>
+  <scroll-view class='section-scroll'>
+    <block wx:for="{{myList}}" wx:key="appid" wx:for-index="index" wx:for-item="item">
+      <view class="item-view" >
+        <text class='item-text' id="{{item.id}}" bindtap='bindBtnTap'>{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
